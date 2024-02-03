@@ -98,7 +98,7 @@ function SignUp() {
   return (
     <div className='flex justify-center items-center h-screen m-4'>
       <div className='w-full max-w-md p-8 space-y-3 rounded-xl border bg-white font-sans mx-auto'>
-        <h1 className='text-3xl font-bold text-center text-indigo-600'>
+        <h1 className='text-3xl font-bold text-center text-[#27634D]'>
           Sign Up
         </h1>
         <form action='' className='space-y-6' onSubmit={handleSubmit}>
@@ -153,17 +153,17 @@ function SignUp() {
           </div>
           <p className='text-red-500 error-margin text-md'>{firebaseErrors}</p>
           <button
-            type='submit'
-            className='text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group'
+            type="submit"
+            className="text-lg rounded-xl relative p-[10px] block w-full bg-[#27634D] text-white border-y-4 duration-500 overflow-hidden focus:border-[#27634D] z-50 group"
           >
-            Sign Up
-            <span className='absolute opacity-0 group-hover:opacity-100 duration-100 group-hover:duration-1000 ease-out flex justify-center inset-0 items-center z-10 text-white'>
+          Sign Up
+            <span className="absolute opacity-0 group-hover:opacity-100 duration-100 group-hover:duration-1000 ease-out flex justify-center inset-0 items-center z-10 text-white">
               Let's go
             </span>
-            <span className='bg-indigo-800 absolute inset-0 -translate-y-full group-hover:translate-y-0 group-hover:duration-1000'></span>
-            <span className='bg-indigo-800 absolute inset-0 translate-y-full group-hover:translate-y-0 group-hover:duration-1000'></span>
-            <span className='bg-indigo-800 absolute inset-0 translate-x-full group-hover:translate-x-0 group-hover:delay-300 delay-100 duration-1000'></span>
-            <span className='bg-indigo-800 absolute inset-0 -translate-x-full group-hover:translate-x-0 group-hover:delay-300 delay-100 duration-1000'></span>
+            <span className="bg-[#1f8a62] absolute inset-0 -translate-y-full group-hover:translate-y-0 group-hover:duration-1000"></span>
+            <span className="bg-[#1f8a62] absolute inset-0 translate-y-full group-hover:translate-y-0 group-hover:duration-1000"></span>
+            <span className="bg-[#1f8a62] absolute inset-0 translate-x-full group-hover:translate-x-0 group-hover:delay-300 delay-100 duration-1000"></span>
+            <span className="bg-[#1f8a62] absolute inset-0 -translate-x-full group-hover:translate-x-0 group-hover:delay-300 delay-100 duration-1000"></span>
           </button>
         </form>
         <SocialLogin />
