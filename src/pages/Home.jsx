@@ -27,10 +27,10 @@ function Home() {
       ) : (
         <div>
           {user?.email ? (
-            <h1 className="text-4xl text-center">lOGGED IN USER</h1>
+            <h1 className="text-2xl text-center">lOGGED IN USER</h1>
           ) : (
             <div>
-              <h1 className="text-4xl text-center">Home Page</h1>
+              <h1 className="text-2xl text-center">Home Page</h1>
               <div className="flex justify-center">
                 <Link to="/login">
                   <button className="px-4 py-2 text-white mt-6 bg-[#27634D] rounded-md">
