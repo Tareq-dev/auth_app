@@ -11,7 +11,7 @@ function SignUp() {
     password: '',
     confirmPassword: '',
   })
-
+  console.log('Signup rendered')
   const [errors, setErrors] = useState({
     email: '',
     password: '',

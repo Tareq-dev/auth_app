@@ -1,13 +1,16 @@
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import getUser from "../context/getUser";
 import auth from "../firebase.auth";
 import { signOut } from "firebase/auth";
 import toast from "react-hot-toast";
 import Loading from "../components/Loading";
-
+ 
 function Home() {
-  const [user, loading] = getUser();
+  const [currentUser, loading] = getUser();
   const navigate = useNavigate();
+
+  console.log("home rendered");
 
   const handleLogout = async () => {
     try {
@@ -26,8 +29,8 @@ function Home() {
         <Loading />
       ) : (
         <div>
-          {user?.email ? (
-            <h1 className="text-2xl text-center">lOGGED IN USER</h1>
+          {currentUser?.email ? (
+            <h1 className="text-2xl text-center">LOGGED IN USER</h1>
           ) : (
             <div>
               <h1 className="text-2xl text-center">Home Page</h1>
@@ -35,15 +38,15 @@ function Home() {
                 <Link to="/login">
                   <button className="px-4 py-2 text-white mt-6 bg-[#27634D] rounded-md">
                     Login
-                  </button>{" "}
+                  </button>
                 </Link>
               </div>
             </div>
           )}
-          {user?.email && (
+          {currentUser?.email && (
             <div>
               <p className="text-center bg-black px-3 py-1 rounded-md text-white mt-5">
-                Email: {user?.email}
+                Email: {currentUser?.email}
               </p>
 
               <div className="flex justify-center gap-7 mt-8 text-white font-semibold">
@@ -62,4 +65,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);

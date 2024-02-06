@@ -10,7 +10,7 @@ function Login() {
     email: "",
     password: "",
   })
-
+  console.log('Login rendered')
   const [errors, setErrors] = useState({
     email: "",
     password: "",
